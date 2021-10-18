@@ -1,13 +1,11 @@
-sudo su
-mkdir /mcr-install \
-    && mkdir /opt/mcr \
-    && cd /mcr-install \
-    && wget -q  https://ssd.mathworks.com/supportfiles/downloads/R2020b/Release/6/deployment_files/installer/complete/glnxa64/MATLAB_Runtime_R2020b_Update_6_glnxa64.zip \
-    && unzip -q MATLAB_Runtime_R2020b_Update_6_glnxa64.zip \
-    && rm -f MATLAB_Runtime_R2020b_Update_6_glnxa64.zip \
-    && ./install -destinationFolder /opt/mcr -agreeToLicense yes -mode silent \
-    && cd / \
-    && rm -rf mcr-install
- exit
+mkdir mcr
+mkdir /opt/mcr
+cd mcr
+wget -q  https://ssd.mathworks.com/supportfiles/downloads/R2020b/Release/6/deployment_files/installer/complete/glnxa64/MATLAB_Runtime_R2020b_Update_6_glnxa64.zip
+unzip -q MATLAB_Runtime_R2020b_Update_6_glnxa64.zip
+rm -f MATLAB_Runtime_R2020b_Update_6_glnxa64.zip
+./install -destinationFolder /opt/mcr -agreeToLicense yes -mode silent
+cd ../
+rm -rf mcr
  
- python setup.py install
+python setup.py install
