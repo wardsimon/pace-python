@@ -8,6 +8,6 @@ mkdir /mcr-install \
     && ./install -destinationFolder /opt/mcr -agreeToLicense yes -mode silent \
     && cd / \
     && rm -rf mcr-install
-    
- cd ~
+ exit
+ 
  python setup.py install
