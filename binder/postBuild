@@ -1,4 +1,5 @@
-pip install cmake
+#!/bin/bash
+
 mkdir mcrbuild
 mkdir mcr
 cd mcrbuild
