@@ -10,5 +10,5 @@ rm -f MATLAB_Runtime_R2020b_Update_6_glnxa64.zip
 cd ../
 rm -rf mcrbuild
  
-export Matlab_ROOT_DIR=~/mcr/
-python38 setup.py install
+export Matlab_ROOT_DIR=~/mcr/v99
+python setup.py install
